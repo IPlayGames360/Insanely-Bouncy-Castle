@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - NextLvl
+  - PrevLvl
+  - UpLvl
+  - DownLvl
+  - BackToLvl4
+  - PrevLvl-RIGHT
+  - NextLvl-LEFT
+  - BackToLvl2
+  - BackToLvl7
+  - BackToLvl1
+  - FinalLvl
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - Slope
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Overlay
+    uniqueID: 633248799
+    locked: 0
