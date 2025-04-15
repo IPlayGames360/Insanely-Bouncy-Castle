@@ -266,7 +266,7 @@ MonoBehaviour:
   power: 5
   rb: {fileID: 321456304491769344}
   minPower: {x: -0.8, y: -1}
-  maxPower: {x: 0.8, y: 1}
+  maxPower: {x: 0.7, y: 1}
   bounceTolerance: 1
   canLaunch: 0
 --- !u!114 &1993770118980293382
