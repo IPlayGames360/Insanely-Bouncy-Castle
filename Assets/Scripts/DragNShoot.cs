@@ -49,6 +49,38 @@ public class DragNShoot : MonoBehaviour
 			{
 				Vector3 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
 				currentPoint.z = 15;
+
+				// Calculate force
+				force = new Vector2(
+					Mathf.Clamp(startPoint.x - currentPoint.x, minPower.x, maxPower.x),
+					Mathf.Clamp(startPoint.y - currentPoint.y, minPower.y, maxPower.y)
+				);
+
+				// Calculate power percentage
+				float powerPercentage = force.magnitude / maxPower.magnitude;
+
+				// Interpolate color from green to red
+				Color lineColor;
+				if (powerPercentage <= 0.33f)
+				{
+					// Green to Yellow
+					lineColor = Color.Lerp(Color.green, Color.yellow, powerPercentage / 0.33f);
+				}
+				else if (powerPercentage <= 0.66f)
+				{
+					// Yellow to Orange
+					lineColor = Color.Lerp(Color.yellow, new Color(1f, 0.5f, 0f), (powerPercentage - 0.33f) / 0.33f);
+				}
+				else
+				{
+					// Orange to Red
+					lineColor = Color.Lerp(new Color(1f, 0.5f, 0f), Color.red, (powerPercentage - 0.66f) / 0.34f);
+				}
+
+				// Set the line color
+				tl.lr.startColor = lineColor;
+				tl.lr.endColor = lineColor;
+
 				tl.RenderLine(startPoint, currentPoint);
 			}
 
